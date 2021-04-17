@@ -22,47 +22,52 @@ function generatePassword() {
         num = confirm('Would you like to use numbers in your password?')
         char = confirm('Would you like to use special characters in your password?')
 
-        if (low === false && cap === false && num === false && char === false)
-        alert('You need to choose at least one option!')
-        return generatePassword ();
-    }
+        if (low === false && cap === false && num === false && char === false) {
+            alert('You need to choose at least one option!')
+            return generatePassword ();
 
-    if (low === true) {
-        charLower = "abcdefghijklmnopqrstuvwxyz"
-    }
-    else {
-        charLower = ""
-    }
+        }
 
-    if (cap == true) {
-        charCap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    }
-    else {
-        charCap = ""
-    }
+        if (low === true) {
+            charLower = "abcdefghijklmnopqrstuvwxyz"
+        }
+        else {
+            charLower = ""
+        }
 
-    if (num == true) {
-        numbers = '0123456789'
-    }
-    else {
-        numbers = ''
-    }
+        if (cap == true) {
+            charCap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        }
+        else {
+            charCap = ""
+        }
 
-    if (char = true) {
-        charSpecial = '<=>?@[\]^_`{|}~!\“#$%&‘()*+,-./:;'
-    }
-    else {
-        charSpecial = ''
-    }
+        if (num == true) {
+            umbers = '0123456789'
+        }
+        else {
+            numbers = ''
+        }
 
-   
+        if (char = true) {
+            charSpecial = '<=>?@[\]^_`{|}~!\“#$%&‘()*+,-./:;'
+        }
+        else {
+            charSpecial = ''
+        }
 
-  return 'yourpassword';
-}
+        random = (charLower + charCap + numbers + charSpecial)
+
+        for (let i = 0; i < pass; ++i) {
+            newPass += random.charAt(Math.floor(Math.random() * random.length));  
+        }
+
+    return newPass;
+    }}
 // Write password to the #password input
 function writePassword() {
   console.log('writing password');
-  var password o= generatePassword();
+  var password = generatePassword();
   var passwordText = document.querySelector('#password');
   passwordText.value = password;
 }
