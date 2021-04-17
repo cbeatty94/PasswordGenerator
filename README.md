@@ -21,3 +21,4 @@ THEN the password is either displayed in an alert or written to the page
 
 ![Untitled](https://user-images.githubusercontent.com/78604328/115122615-d3a25f80-9f86-11eb-9f63-f3664d940a75.png)
 
+https://cbeatty94.github.io/PasswordGenerator/
