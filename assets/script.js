@@ -15,6 +15,48 @@ function generatePassword() {
         alert("That is not a number! Please choose a number between 8 and 128!")
         return generatePassword();
     }
+
+    if (pass => 8 && pass <= 128) {
+        low = confirm('Would you like to use lowercase letters in your password?')
+        cap = confirm('Would you like to use capitalized letters in your password?')
+        num = confirm('Would you like to use numbers in your password?')
+        char = confirm('Would you like to use special characters in your password?')
+
+        if (low === false && cap === false && num === false && char === false)
+        alert('You need to choose at least one option!')
+        return generatePassword ();
+    }
+
+    if (low === true) {
+        charLower = "abcdefghijklmnopqrstuvwxyz"
+    }
+    else {
+        charLower = ""
+    }
+
+    if (cap == true) {
+        charCap = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    }
+    else {
+        charCap = ""
+    }
+
+    if (num == true) {
+        numbers = '0123456789'
+    }
+    else {
+        numbers = ''
+    }
+
+    if (char = true) {
+        charSpecial = '<=>?@[\]^_`{|}~!\“#$%&‘()*+,-./:;'
+    }
+    else {
+        charSpecial = ''
+    }
+
+   
+
   return 'yourpassword';
 }
 // Write password to the #password input
