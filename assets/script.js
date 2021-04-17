@@ -28,7 +28,7 @@ function generatePassword() {
 
         }
 
-        if (low === true) {
+        if (low == true) {
             charLower = "abcdefghijklmnopqrstuvwxyz"
         }
         else {
@@ -43,14 +43,14 @@ function generatePassword() {
         }
 
         if (num == true) {
-            umbers = '0123456789'
+            numbers = '0123456789'
         }
         else {
             numbers = ''
         }
 
-        if (char = true) {
-            charSpecial = '<=>?@[\]^_`{|}~!\“#$%&‘()*+,-./:;'
+        if (char == true) {
+            charSpecial = "~!“#$%&‘()*+,-./:;<=>?@][^_`{|}"
         }
         else {
             charSpecial = ''
@@ -63,7 +63,8 @@ function generatePassword() {
         }
 
     return newPass;
-    }}
+    }
+}
 // Write password to the #password input
 function writePassword() {
   console.log('writing password');
